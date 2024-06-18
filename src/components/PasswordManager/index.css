@@ -1,0 +1,248 @@
+.app-container {
+  background-color: #9ba9eb;
+  background-size: cover;
+  padding: 20px;
+  height: 100%;
+}
+
+.app-logo {
+  height: 60px;
+  margin-bottom: 10px;
+}
+.add-passwords-container {
+  display: flex;
+  align-items: center;
+  background-color: #5763a5;
+  padding: 20px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  width: 90%;
+}
+
+.add-password-heading {
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 500;
+  font-family: 'Roboto';
+}
+.form-container {
+  width: 100%;
+}
+.input-container {
+  margin-bottom: 20px;
+  width: 80%;
+}
+
+.input-logo-container {
+  display: flex;
+}
+
+.input-logo-bg-container {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 50px;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+
+.input-logo {
+  height: 20px;
+}
+
+.input {
+  outline: none;
+  border-width: 0px;
+  margin-left: 2px;
+  padding-left: 10px;
+  font-size: 15px;
+  font-family: 'Roboto';
+  width: 100%;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 80%;
+}
+
+.add-button {
+  background-color: #0b69ff;
+  outline: none;
+  border-radius: 8px;
+  padding: 10px;
+  width: 100px;
+  font-family: 'Roboto';
+  border-width: 0px;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.password-manager-lg-image {
+  width: 30%;
+  margin-left: 40px;
+}
+
+.password-manager-sm-image {
+  display: none;
+}
+
+.passwords-container {
+  background-color: #5763a5;
+  padding: 20px;
+  border-radius: 20px;
+  width: 90%;
+}
+
+.password-search-bar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.password-heading-count-container {
+  display: flex;
+  align-items: center;
+}
+.password-heading {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 500;
+  font-family: 'Roboto';
+}
+
+.count-container {
+  background-color: transparent;
+  border: 1px solid #c3caea;
+  border-radius: 15px;
+  margin-left: 10px;
+}
+
+.count {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 400;
+  font-family: 'Roboto';
+  margin: 5px;
+}
+
+.search-input-logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.search-input-logo-bg-container {
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  border-width: 0px;
+  outline: none;
+  height: 40px;
+}
+.search-input {
+  outline: none;
+  border-width: 0px;
+  height: 40px;
+  border-radius: 0px;
+  margin-left: 2px;
+  font-size: 17px;
+  font-family: 'Roboto';
+  padding-left: 20px;
+  width: 100%;
+}
+.horizontal-line {
+  background-color: #b6c3ca;
+}
+
+.show-password-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.check-box-element {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.show-password-heading {
+  color: #ffffff;
+  font-family: 'Roboto';
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.added-passwords-container {
+  list-style-type: none;
+  display: flex;
+}
+
+.no-password-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.no-passwords-image {
+  width: 300px;
+}
+
+.no-passwords-heading {
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 24px;
+  color: #ffffff;
+}
+
+@media screen and (max-width: 768px) {
+  .app-container {
+    background-size: cover;
+    height: 100%;
+  }
+  .add-passwords-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .app-logo {
+    height: 50px;
+  }
+  .password-manager-lg-image {
+    width: 40%;
+    margin-left: 40px;
+    display: none;
+  }
+
+  .password-manager-sm-image {
+    display: flex;
+    width: 100%;
+    order: -1;
+  }
+  .password-heading {
+    font-size: 15px;
+    margin: 0px;
+  }
+
+  .count-container {
+    margin-left: 3px;
+  }
+  .count {
+    font-size: 15px;
+  }
+  .search-input-logo-bg-container {
+    width: 30px;
+    margin-left: 10px;
+  }
+}
