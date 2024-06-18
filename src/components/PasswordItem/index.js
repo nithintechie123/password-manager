@@ -1,12 +1,19 @@
-import {FaTrash} from 'react-icons/fa'
-
 import './index.css'
 
 const renderPasswords = props => {
-  const {eachPasswordDetails, isCheckedValue} = props
-  const {username, website, password, initial, bgColor} = eachPasswordDetails
-  console.log(password)
-  console.log(isCheckedValue)
+  const {eachPasswordDetails, isCheckedValue, onDelete} = props
+  const {
+    id,
+    username,
+    websiteUrl,
+    password,
+    initial,
+    bgColor,
+  } = eachPasswordDetails
+
+  const onClickDeleteIcon = () => {
+    onDelete(id)
+  }
 
   const hideAndSeekPasswordView = isCheckedValue ? (
     <p className="input-details-text">{password}</p>
@@ -24,7 +31,7 @@ const renderPasswords = props => {
         <h1 className="initial-text">{initial}</h1>
       </div>
       <div className="input-details-container">
-        <p className="input-details-text">{website}</p>
+        <p className="input-details-text">{websiteUrl}</p>
         <p className="input-details-text">{username}</p>
         {hideAndSeekPasswordView}
       </div>
@@ -33,8 +40,13 @@ const renderPasswords = props => {
         data-testid="delete"
         label="true"
         className="trash-button"
+        onClick={onClickDeleteIcon}
       >
-        <FaTrash className="trash-icon" />
+        <img
+          src="https://assets.ccbp.in/frontend/react-js/password-manager-delete-img.png"
+          alt="delete"
+          className="trash-icon"
+        />
       </button>
     </li>
   )

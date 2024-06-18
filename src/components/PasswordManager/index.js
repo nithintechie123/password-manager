@@ -51,6 +51,17 @@ class PasswordManager extends Component {
     }))
   }
 
+  onDelete = id => {
+    const {passwordsList} = this.state
+
+    const filteredList = passwordsList.filter(
+      eachPassword => eachPassword.id !== id,
+    )
+
+    console.log(filteredList)
+    this.setState({passwordsList: filteredList})
+  }
+
   onAddPassword = event => {
     event.preventDefault()
 
@@ -121,7 +132,7 @@ class PasswordManager extends Component {
               <div className="input-logo-bg-container">
                 <img
                   src="https://assets.ccbp.in/frontend/react-js/password-manager-password-img.png "
-                  alt="website"
+                  alt="password"
                   className="input-logo"
                 />
               </div>
@@ -189,6 +200,7 @@ class PasswordManager extends Component {
                   type="search"
                   placeholder="Search"
                   className="search-input"
+                  value={searchInput}
                   onChange={this.onChangeSearchInput}
                 />
               </div>
@@ -223,6 +235,7 @@ class PasswordManager extends Component {
                   key={eachItem.id}
                   eachPasswordDetails={eachItem}
                   isCheckedValue={onShowPassword}
+                  onDelete={this.onDelete}
                 />
               ))}
             </ul>

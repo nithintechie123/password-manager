@@ -44,6 +44,7 @@
 .trash-icon {
   color: #ffffff;
   cursor: pointer;
+  width: 25px;
 }
 
 .password-stars {

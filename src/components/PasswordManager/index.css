@@ -186,6 +186,7 @@
 .added-passwords-container {
   list-style-type: none;
   display: flex;
+  padding: 0px;
 }
 
 .no-password-container {
@@ -244,5 +245,11 @@
   .search-input-logo-bg-container {
     width: 30px;
     margin-left: 10px;
+  }
+  .added-passwords-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
   }
 }
