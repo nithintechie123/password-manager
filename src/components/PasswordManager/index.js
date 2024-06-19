@@ -169,7 +169,7 @@ class PasswordManager extends Component {
     const {passwordsList, searchInput, onShowPassword} = this.state
 
     const filteredPassList = passwordsList.filter(eachPassword =>
-      eachPassword.username.includes(searchInput.toLowerCase()),
+      eachPassword.websiteUrl.toLowerCase().includes(searchInput.toLowerCase()),
     )
     return (
       <div className="app-container">
